@@ -9,8 +9,8 @@
  *   HETA[0-9]*_A     FA  (full level)
  *   HETA[0-9]*_B     FB  (full level)
  *   HETA[0-9]*.M     eta (half level)
- *   HETA[0-9]*_A.M   FA  (half level)
- *   HETA[0-9]*_B.M   FB  (half level)
+ *   HETA[0-9]*.M_A   FA  (half level)
+ *   HETA[0-9]*.M_B   FB  (half level)
  */
 #include <assert.h>
 #include <math.h>
@@ -246,8 +246,8 @@ make_heta90()
 
     axes[2] = new_GT3_Dim(NLEVS,     "HETA90_A",   "FA", "Pa", a);
     axes[3] = new_GT3_Dim(NLEVS,     "HETA90_B",   "FB", "1",  b);
-    axes[4] = new_GT3_Dim(NLEVS + 1, "HETA90_A.M", "FA", "Pa", a_half);
-    axes[5] = new_GT3_Dim(NLEVS + 1, "HETA90_B.M", "FB", "1",  b_half);
+    axes[4] = new_GT3_Dim(NLEVS + 1, "HETA90.M_A", "FA", "Pa", a_half);
+    axes[5] = new_GT3_Dim(NLEVS + 1, "HETA90.M_B", "FB", "1",  b_half);
 
     write_axes(axes, 6);
     for (i = 0; i < 6; ++i) {
@@ -290,8 +290,8 @@ make_heta40()
 
     axes[2] = new_GT3_Dim(NLEVS,     "HETA40_A",   "FA", "Pa", a);
     axes[3] = new_GT3_Dim(NLEVS,     "HETA40_B",   "FB", "1",  b);
-    axes[4] = new_GT3_Dim(NLEVS + 1, "HETA40_A.M", "FA", "Pa", a_half);
-    axes[5] = new_GT3_Dim(NLEVS + 1, "HETA40_B.M", "FB", "1",  b_half);
+    axes[4] = new_GT3_Dim(NLEVS + 1, "HETA40.M_A", "FA", "Pa", a_half);
+    axes[5] = new_GT3_Dim(NLEVS + 1, "HETA40.M_B", "FB", "1",  b_half);
 
     write_axes(axes, 6);
     for (i = 0; i < 6; ++i) {
